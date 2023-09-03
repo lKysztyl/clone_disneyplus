@@ -1,5 +1,54 @@
-$cor: green;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$corDeFudo: #040714;
+$corTextPrincipal: silver;
+$corTextoSegundario: #f9f9f9;
 
 body {
-    background-color: $cor;
+    background-color: $corDeFudo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextPrincipal;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: $corTextoSegundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text();
+}
+
+.text--small {
+    @include text(12px)
+}
+
+.title {
+    @include title();
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title--small {
+    @include title(28px)
+}
+
+.link-text {
+    @include text(18px);
+    color: $corTextoSegundario;
+    text-decoration: underline;
 }
