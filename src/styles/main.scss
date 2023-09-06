@@ -2,6 +2,7 @@
 
 @use 'variaveis' as v;
 @use 'hero';
+@use 'shows';
 
 @font-face {
     font-family: Avenir;
@@ -18,12 +19,13 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Avenir, sans-serif;
 }
 
 
 body {
     background-color: v.$corDeFudo;
-    font-family: Avenir, sans-serif;
+    
 }
 
 @mixin text($fontSize: 16px) {
