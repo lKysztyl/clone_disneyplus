@@ -15,6 +15,11 @@ function images() {
         .pipe(gulp.dest('./dist/images'))
 };
 
-exports.default = () => {
-    gulp.watch('./src/styles/*.scss', './index.html', gulp.parallel(style, images)); 
+function watchFiles() {
+    gulp.watch('./src/styles/*.scss', style);
+    gulp.watch('./index.html', style)
 }
+
+exports.style = style;
+exports.watch = watchFiles;
+exports.default = gulp.series(style, watchFiles);
