@@ -7,7 +7,7 @@ const uglify = require('gulp-uglify');
 function scripts() {
     return gulp.src('./src/js/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./dist/js'));
 };
 
 function style() {
