@@ -109,6 +109,7 @@ body {
     padding: 8px 14px;
     letter-spacing: 1px;
     border: 1px solid v.$corBtnPrincipal;
+    cursor: pointer;
 
     &:hover {
         background-color: lighten(v.$corBtnPrincipal, 3%);
