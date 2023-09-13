@@ -29,4 +29,4 @@ function watchFiles() {
 
 exports.style = style;
 exports.watch = watchFiles;
-exports.build = gulp.parallel(style, watchFiles, scripts, images);
+exports.build = gulp.parallel(style, scripts, images);
